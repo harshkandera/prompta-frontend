@@ -249,7 +249,8 @@ const NewAssigment = () => {
                                                     htmlFor="terms"
                                                     className=" font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                                                 >
-                                                    PostTask Visibility
+                                                    Evaluative Task Visibility
+                                                    {/* add a yes/no checkbox */}
                                                 </label>
                                             </div>
 
@@ -356,7 +357,7 @@ const NewAssigment = () => {
                             {/* New fields for Pre and Post Test Topics */}
                             <div className="sm:col-span-3">
                                 <label htmlFor="preTestTopic" className="block font-medium mb-2 leading-6">
-                                    Pre-Test Topic
+                                    Diagnostic Test Topic
                                 </label>
                                 <div>
                                     <textarea
@@ -373,7 +374,7 @@ const NewAssigment = () => {
 
                             <div className="sm:col-span-3">
                                 <label htmlFor="postTestTopic" className="block font-medium mb-2 leading-6">
-                                    Post-Test Topic
+                                    Evaluative Test Topic
                                 </label>
                                 <div>
                                     <textarea

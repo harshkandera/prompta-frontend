@@ -331,7 +331,7 @@ function SelfAssessment({ forloading, popup }) {
   return (
     <div>
       <div className=" mt-10 mb-2 ml-2 flex items-center gap-2 text-xl">
-        <h1 className="text-xl font-bold">Self Assessment</h1>
+        <h1 className="text-xl font-bold">Self-Assessment</h1>
         <div>
           <img src={img19} alt="" className="w-8  " />
         </div>
@@ -423,8 +423,6 @@ function SelfAssessment({ forloading, popup }) {
         </div>
       )}
 
-
-
       {asessmentData?.userQuestions[0]?.myfile?.length > 0 && (
         <>
           <div className="mt-10 mb-2 ml-2 flex items-center gap-2 text-xl">
@@ -448,8 +446,7 @@ function SelfAssessment({ forloading, popup }) {
       )}
 
       <div>
-        {(asessmentData &&
-          !asessmentData?.userQuestions[0]?.submitted ||
+        {((asessmentData && !asessmentData?.userQuestions[0]?.submitted) ||
           !asessmentData?.userQuestions[0]?.response.length > 0) &&
           question &&
           asessmentData?.userQuestions[0]?.myfile?.length > 0 &&
@@ -555,8 +552,7 @@ function SelfAssessment({ forloading, popup }) {
             </div>
           ))}
 
-        {(asessmentData &&
-          !asessmentData?.userQuestions[0]?.submitted ||
+        {((asessmentData && !asessmentData?.userQuestions[0]?.submitted) ||
           !asessmentData?.userQuestions[0]?.response.length > 0) &&
           asessmentData?.userQuestions[0]?.myfile?.length > 0 && (
             <div className="flex m-6 my-20 justify-center items-center">
@@ -588,7 +584,10 @@ function SelfAssessment({ forloading, popup }) {
         asessmentData?.userQuestions[0]?.submitted &&
         asessmentData?.userQuestions[0]?.response.length > 0 && (
           <div className=" mt-10 mb-2 ml-2 flex items-center gap-2 ">
-            <h1 className="text-lg font-bold">Self Assessment Response</h1>
+            <h1 className="text-lg font-bold">
+              Carefully evaluate your writing based on the checklist provided
+              below.
+            </h1>
           </div>
         )}
 
@@ -654,7 +653,7 @@ function SelfAssessment({ forloading, popup }) {
               speed="0.5"
               style={{ width: "100px", height: "100px" }}
             />
-            <p>Thanks for completing the self-assessment !</p>
+            <p>You have successfully completed self-assessment !</p>
 
             <Button
               onClick={() => {

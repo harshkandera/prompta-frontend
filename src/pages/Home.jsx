@@ -249,12 +249,12 @@ const Home = () => {
                                 <h2 className='tracking-tight text-richblue-700'>{LOGO}</h2>
 
                                 <h2 className='tracking-tight text-gray-800'>
-                                    Enhance your writing, one draft at a time !
+                                    Enhance your writing, one draft at a time!
                                 </h2>
 
                             </div>
 
-                            <p className='text-xl  text-start  font-medium text-richblue-700 font-pj'>Welcome to <span className='font-semibold'>{LOGO} </span>! </p>
+                            <p className='text-xl  text-start  font-medium text-richblue-700 font-pj'>Welcome to <span className='font-semibold'>{LOGO}</span>! </p>
 
                             <p className='text-xl text-start  font-medium text-richblue-700 font-pj'>Feeling stuck with your writing? </p>
 

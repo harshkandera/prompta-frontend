@@ -621,7 +621,7 @@ function PeerSubmission({ forloading, popup }) {
               asessmentData?.peerQuestions[0]?.response?.length > 0 &&
               asessmentData?.peerQuestions[0]?.submitted && (
                 <div className=" mt-10 mb-2 ml-2 flex items-center gap-2">
-                  <h1 className="text-lg font-bold">Response Got From Peer</h1>
+                  <h1 className="text-lg font-bold">Response From Peer</h1>
                 </div>
               )}
 
@@ -693,7 +693,7 @@ function PeerSubmission({ forloading, popup }) {
               speed="0.5"
               style={{ width: "100px", height: "100px" }}
             />
-            <p>Thanks for completing the peer-assessment !</p>
+            <p>You have successfully completed peer assessment !</p>
 
             <Button
               onClick={() => {

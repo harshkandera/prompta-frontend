@@ -253,7 +253,7 @@ function ProficiencyTest() {
                 !(submissionData?.preresponses.length > 0) && (
                   <>
                     <div className=" mt-10 mb-2 ml-2 flex items-center gap-2 text-xl">
-                      <h1 className="text-xl font-semibold ">Pre Test</h1>
+                      <h1 className="text-xl font-semibold ">Diagnostic Test</h1>
                       <div>
                         <img src={img18} alt="" className="w-8  " />
                       </div>
@@ -263,7 +263,7 @@ function ProficiencyTest() {
                     {assignment?.preTestTopic && (
                       <div className="my-4 ml-2 text-base ">
                         <span className="font-medium text-">
-                          Pre Test Topic :
+                          Diagnostic Test Topic :
                         </span>
                         <span className="text-sm">
                           {assignment?.preTestTopic}
@@ -353,7 +353,7 @@ function ProficiencyTest() {
               {submissionData?.initialDone && (
                 <div>
                   <div className=" mt-10 mb-2 ml-2 flex items-center gap-2 text-xl">
-                    <h1 className="text-xl font-semibold ">Pre Test</h1>
+                    <h1 className="text-xl font-semibold ">Diagnostic Test</h1>
                     <div>
                       <img src={img18} alt="" className="w-8  " />
                     </div>
@@ -363,7 +363,7 @@ function ProficiencyTest() {
                   {assignment?.preTestTopic && (
                     <div className="my-4 ml-2 text-base ">
                       <span className="font-medium text-">
-                        Pre Test Topic :
+                        Diagnostic Test Topic :
                       </span>
                       <span className="text-sm">
                         {assignment?.preTestTopic}
@@ -428,7 +428,7 @@ function ProficiencyTest() {
                   <>
                     <div className="mt-20">
                       <div className=" mt-10 mb-2 ml-2 flex items-center gap-2 text-xl">
-                        <h1 className="text-xl font-semibold ">Post Test</h1>
+                        <h1 className="text-xl font-semibold ">Evaluative Test</h1>
                         <div>
                           <img src={img28} alt="" className="w-10  " />
                         </div>
@@ -438,7 +438,7 @@ function ProficiencyTest() {
                       {assignment?.postTestTopic && (
                         <div className="my-4 ml-2 text-base ">
                           <span className="font-medium text-">
-                            Post Test Topic :
+                            Evaluative Test Topic :
                           </span>
                           <span className="text-sm">
                             {assignment?.postTestTopic}
@@ -526,7 +526,7 @@ function ProficiencyTest() {
               {submissionData && submissionData?.postTest.length > 0 && (
                 <>
                   <div className="mt-10 mb-2 ml-2 flex items-center gap-2 text-xl">
-                    <h1 className="text-xl font-semibold">Post Test</h1>
+                    <h1 className="text-xl font-semibold">Evaluative Test</h1>
                     <div>
                       <img src={img28} alt="" className="w-10" />
                     </div>
@@ -535,7 +535,7 @@ function ProficiencyTest() {
                   {/* Post Test Topic Display */}
                   {assignment?.postTestTopic && (
                     <div className="my-4 ml-2 text-base">
-                      <span className="font-medium mr-2">Post Test Topic:</span>
+                      <span className="font-medium mr-2">Evaluative Test Topic:</span>
                       <span className="text-sm text-gray-700">
                         {assignment?.postTestTopic}
                       </span>

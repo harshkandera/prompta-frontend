@@ -1164,7 +1164,7 @@ export const SetQuestion = () => {
 
                                     <div className='mt-8'>
                                         <div className='flex gap-2 items-center '>
-                                            <h3 className='text-lg mb-2 font-semibold'>Expert Assessment Rubrics</h3>
+                                            <h3 className='text-lg mb-2 font-semibold'>Mentor Assessment Rubrics</h3>
                                             <h3 className='text-sm mb-2 w-32 font-semibold gap-2 flex'>Total : <div className='flex justify-center items center text-richblue-300 w-6 h-6 rounded-full bg-richblue-100 border-[0.5px] border-richblue-300 font-semibold'><p>{sum3}</p></div></h3>
                                         </div>
 

@@ -21,7 +21,12 @@ import { Button, buttonVariants } from "../../component/ui/button";
 import { BiArrowBack } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 import { cn } from "../../lib/utils";
-import { Card, CardContent, CardHeader, CardTitle } from "../../component/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "../../component/ui/card";
 import { Badge } from "../../component/ui/badge";
 import { CheckCircle2 } from "lucide-react";
 
@@ -321,7 +326,7 @@ const Submission = () => {
 
                   <div className="flex justify-center items-center gap-4">
                     <p className="text-sm  text-gray-800   font-bold min-w-fit">
-                      Instructor Name
+                      Name of the Instructor
                     </p>
 
                     <p className="font-medium">
@@ -346,19 +351,19 @@ const Submission = () => {
                     <p>{assignment?.experts}</p>
                   </div>
 
-                  <div className="flex justify-center items-center gap-4">
+                  {/* <div className="flex justify-center items-center gap-4">
                     <p className="text-sm  text-gray-800   font-bold min-w-fit">
-                      Pre Test Topic
+                      Diagnostic Test Topic
                     </p>
                     <p>{assignment?.preTestTopic}</p>
-                  </div>
+                  </div> */}
 
-                  <div className="flex justify-center items-center gap-4">
+                  {/* <div className="flex justify-center items-center gap-4">
                     <p className="text-sm  text-gray-800   font-bold min-w-fit">
-                      Post Test Topic
+                      Evaluative Test Topic
                     </p>
                     <p>{assignment?.PostTestTopic}</p>
-                  </div>
+                  </div> */}
 
                   <div className="w-full">
                     <h3 className="text-sm font-bold text-gray-800 ">
@@ -517,7 +522,9 @@ const Submission = () => {
                                 </div>
 
                                 <div>
-                                  <  TaskQuestionsList  task={task?.assignmentQues} />
+                                  <TaskQuestionsList
+                                    task={task?.assignmentQues}
+                                  />
                                 </div>
 
                                 {/* Your stepper component goes here */}
@@ -525,7 +532,6 @@ const Submission = () => {
                                   <Stepper
                                     orientation={orientation}
                                     styles={"data-[current=true]"}
-
                                     // onClickStep={(step, setStep) =>{
                                     //   toast.success(step)
                                     //   setStep(step)
@@ -652,7 +658,9 @@ const Footer = ({ initial }) => {
     <>
       {hasCompletedAllSteps && (
         <div className="h-20 flex items-center justify-center border text-primary rounded-md">
-          <h1 className="text-xl">Woohoo! All steps completed! 🎉</h1>
+          <h1 className="text-xl">
+            Congratulations ! You have successfully completed All the tasks 🎉
+          </h1>
         </div>
       )}
       <div className="w-full flex justify-end gap-2">
@@ -670,7 +678,10 @@ export const TaskQuestionsList = ({ task }) => {
   return (
     <div className="space-y-4 my-4">
       {task.map((ques, index) => (
-        <Card key={index} className="hover:shadow-md transition-shadow duration-300">
+        <Card
+          key={index}
+          className="hover:shadow-md transition-shadow duration-300"
+        >
           <CardHeader className="pb-2">
             <CardTitle className="flex items-center justify-between">
               <span className="text-base">Task {index + 1}</span>
@@ -681,9 +692,7 @@ export const TaskQuestionsList = ({ task }) => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-sm text-muted-foreground">
-              {ques}
-            </p>
+            <p className="text-sm text-muted-foreground">{ques}</p>
           </CardContent>
         </Card>
       ))}

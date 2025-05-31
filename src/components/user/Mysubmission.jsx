@@ -193,7 +193,7 @@ const Mysubmission = () => {
                     {submissionData && (
                       <div>
                         <div className=" mt-10 mb-2 ml-2 flex items-center gap-2 text-xl">
-                          <h1 className="text-xl font-bold">Self Assessment</h1>
+                          <h1 className="text-xl font-bold">Self-Assessment</h1>
                           <div>
                             <img src={img19} alt="" className="w-8  " />
                           </div>
@@ -224,7 +224,7 @@ const Mysubmission = () => {
                       submissionData.userQuestions.length > 0 && (
                         <div className=" mt-10 mb-2 ml-2 flex items-center gap-2 ">
                           <h1 className="text-lg font-bold">
-                            Self Assessment Response
+                            Self-Assessment Response
                           </h1>
                         </div>
                       )}
@@ -393,7 +393,7 @@ const Mysubmission = () => {
                               0 && (
                               <div className=" mt-10 mb-2 ml-2 flex items-center gap-2">
                                 <h1 className="text-lg font-bold">
-                                  Response Got From Peer
+                                  Response From Peer
                                 </h1>
                               </div>
                             )}
@@ -462,7 +462,7 @@ const Mysubmission = () => {
                       submissionData.expertQuestions[0] && (
                         <div className=" mt-10 mb-2 ml-2 flex items-center gap-2 text-xl">
                           <h1 className="text-xl font-bold">
-                            Teacher Assessment
+                            Mentor Assessment
                           </h1>
                           <div>
                             <img src={img23} alt="" className="w-10 " />
@@ -497,7 +497,7 @@ const Mysubmission = () => {
                       submissionData.expertQuestions[0].myfile.length > 0 && (
                         <div className=" mt-10 mb-2 ml-2 flex items-center gap-2 text-xl">
                           <h1 className="text-xl font-bold">
-                            Teacher Assessment File
+                            Mentor Assessment File
                           </h1>
                         </div>
                       )}
@@ -536,7 +536,7 @@ const Mysubmission = () => {
                         0 && (
                         <div className=" mt-10 mb-2 ml-2 flex items-center gap-2 text-lg">
                           <h1 className="text-xl font-bold">
-                            Response Got From Teacher
+                            Response From Mentor
                           </h1>
                         </div>
                       )}
@@ -681,8 +681,7 @@ const Mysubmission = () => {
                       submissionData.completed && (
                         <div className="flex justify-center text-lg items-center font-semibold font-roboto">
                           <p>
-                            Great You Have Completed Your Assessment
-                            Successfully !
+                            You have successfully completed your assesments !
                           </p>
                         </div>
                       )}

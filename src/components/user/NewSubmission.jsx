@@ -56,7 +56,7 @@ function NewSubmission() {
             <div className="flex flex-col justify-center items-center">
               <h1 className="font-bold ">Good Job!</h1>
               <p className="text-sm flex font-normal justify-center items-center">
-                Your Response Submitted
+                Your Response is Submitted
               </p>
               <p className="text-sm font-normal ">Successfully.</p>
             </div>

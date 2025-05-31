@@ -202,7 +202,7 @@ function ExpertSubmission({ forloading }) {
 
       {
         state &&      <div className=' mt-10 mb-20 ml-2 flex items-center gap-2 text-xl'>
-        <h1 className='text-xl font-bold'>Teacher Assessment</h1>
+        <h1 className='text-xl font-bold'>Mentor Assessment</h1>
         <div >
           <img src={img23} alt="" className='w-10  ' />
 
@@ -315,14 +315,14 @@ Next
 
       {state && asessmentData?.expertQuestions[0]?.myfile?.length > 0  && !asessmentData?.expertQuestions[0]?.response?.length > 0   &&
         <div className='flex flex-col gap-2 justify-center text-3xl text-gray-800 items-center my-20 font-bold '>
-          <p>Wait For The Mentor Response....</p></div>
+          <p>Wait For Mentor Response...</p></div>
 
       }
 
 
       {state && asessmentData?.expertQuestions[0]?.myfile?.length > 0  && asessmentData?.expertQuestions[0]?.response?.length > 0   &&
         <div className=' mt-10 mb-2 ml-2 flex items-center gap-2 text-lg'>
-          <h1 className='text-xl font-bold'>Response Got From Teacher</h1>
+          <h1 className='text-xl font-bold'>Response From Mentor</h1>
 
         </div>
       }
@@ -409,7 +409,7 @@ Next
             style={{ width: '100px', height: '100px' }}
           />
 
-          <p>Thanks for completing the mentor-assessment !</p>
+          <p>You have successfully completed mentor assessment !</p>
 
           <Button onClick={() => {
             navigate(`/students/add_submission/${user._id}/${AssignmentId}`)
