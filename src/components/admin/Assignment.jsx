@@ -118,7 +118,7 @@ const Assignment = () => {
             assessmentType,
             profMarksVisible,
             preTestTopic,
-            postTestTopic
+            postTestTopic,
           } = response.data.assignment;
           setFormData({
             assignmentName,
@@ -155,7 +155,6 @@ const Assignment = () => {
     });
   }
 
-
   const submithandler = async (event) => {
     event.preventDefault();
 
@@ -164,7 +163,6 @@ const Assignment = () => {
     for (const key in formData) {
       formDataToSend.append(key, formData[key]);
     }
-
 
     formDataToSend.append("groups", JSON.stringify(groups));
     formDataToSend.append("maxStudent", JSON.stringify(maxStudent));
@@ -274,6 +272,30 @@ const Assignment = () => {
       console.error("An error occurred:", error);
     }
   };
+
+  const [unverifiedCount, setUnverifiedCount] = useState(0);
+
+  const fetchUnverifiedCount = async () => {
+    try {
+      const result = await apiConnector(
+        "GET",
+        `${process.env.REACT_APP_BASE_URL}/api/v2/get_allsubmission/${id}`,
+        null,
+        { Authorization: `Bearer ${token}` }
+      );
+
+      const submissions = result.data.Allsubmission || [];
+
+      const count = submissions.filter((item) => !item.verified).length;
+      setUnverifiedCount(count);
+    } catch (error) {
+      console.error("Failed to fetch unverified count", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchUnverifiedCount();
+  }, [id]);
 
   return (
     <div>
@@ -660,7 +682,16 @@ const Assignment = () => {
                   <Link
                     to={`/adminpannel/view_submission/${id}/${formData.assignmentName}`}
                   >
-                    <Button variant="btn">View Submissions</Button>
+                    <div className="relative inline-block">
+                      <Button variant="btn" className="relative">
+                        View Submissions
+                        {unverifiedCount > 0 && (
+                          <span className="absolute -top-2 -right-3 flex items-center justify-center w-5 h-5 bg-red-500 text-white text-xs rounded-full">
+                            {unverifiedCount}
+                          </span>
+                        )}
+                      </Button>
+                    </div>
                   </Link>
 
                   <Button
